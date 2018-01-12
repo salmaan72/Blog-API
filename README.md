@@ -53,9 +53,9 @@ In postman type in the following URL for a get request:
 This operation gets all the blog posts stored in the database.
 
 #### 4. API to view a particular blog
-get request, url `http://localhost:3000/api/particular-blog`
-In the query parameters add a key **id** and value **objectId** of a certain blog post that is to be display.
-Or write the URL like this: `http://localhost:3000/api/particular-blog?id=[object id]` exclude brackets.
+get request, url `http://localhost:3000/api/particular-blog`  
+In the query parameters add a key **id** and value **objectId** of a certain blog post that is to be displayed.
+Or construct the URL like this: `http://localhost:3000/api/particular-blog?id=[object id]` exclude brackets.
 
 #### 5. API to edit a blog
 put request method, url `http://localhost:3000/api/edit-blog`  
