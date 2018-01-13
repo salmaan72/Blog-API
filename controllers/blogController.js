@@ -62,7 +62,14 @@ blogController.editBlog = function(req,res){
     if(err){
       res.send(err);
     }
-    blog.title = req.body.title;
+    for(key in req.body){
+      if(key === "title"){
+        blog.title = req.body.title;
+      }
+      else if(key === "content"){
+        blog.content = req.body.content;
+      }
+    }
     blog.save(function(err){
       if(err){
         res.send(err);
