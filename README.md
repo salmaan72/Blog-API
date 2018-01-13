@@ -60,13 +60,21 @@ Or construct the URL like this: `http://localhost:3000/api/particular-blog?id=[o
 #### 5. API to edit a blog
 put request method, url `http://localhost:3000/api/edit-blog`  
 In the query parameters add a key **id** and value **ObjectId** of a particular blog that is to be updated.
-In the body parameters create a json object with data to be updated.
+In the body parameters create a json object with data to be updated.   
 For instance, if title of the blog has to be updated, then pass the following through body parameters:
 ```
 {
   "title":"new_updated_title"
 }
 ```
+If the blog is updated successfully, then an acknowledgement is sent.
+```
+//acknowledgement
+{
+    "message": "blog updated"
+}
+```
+A `get` method is also associated with the same url, just to confirm the changes. Leave the url as it is and change the http request method to `get` in the postman app.
 
 #### 6. API to delete a blog
 delete request method, url `http://localhost:3000/api/delete-blog`  
